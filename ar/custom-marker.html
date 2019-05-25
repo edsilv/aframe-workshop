@@ -20,22 +20,25 @@
         ></a-asset-item>
       </a-assets>
 
-      <a-entity
-        position="0 1 0"
-        scale="0.1 0.1 0.1"
-        gltf-model="#gourd"
-      ></a-entity>
+			<a-marker type="pattern" url="/assets/marker.patt">
+				<a-entity
+					position="0 1 0"
+					scale="0.1 0.1 0.1"
+					gltf-model="#gourd"
+				>
+					<a-animation
+						attribute="rotation"
+						dur="10000"
+						easing="linear"
+						fill="forwards"
+						to="0 360 0"
+						repeat="indefinite"
+					></a-animation>
+				</a-entity>
+			</a-marker>
 
-      <a-animation
-        attribute="rotation"
-        dur="10000"
-        easing="linear"
-        fill="forwards"
-        to="0 360 0"
-        repeat="indefinite"
-      ></a-animation>
+			<a-entity camera></a-entity>
 
-      <a-marker type="pattern" url="assets/marker.patt"></a-marker>
     </a-scene>
   </body>
 </html>

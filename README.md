@@ -45,3 +45,13 @@ Should be a black border.
 Thicker borders are better for stability.
 
 Markers can be as small as 1.5/2cm but means that the phone has to be held close.
+
+Models must be placed inside the `a-marker` tags.
+
+Need to include a `<a-entity camera></a-entity>`
+
+## Multiple markers
+
+
+## Triggering animations
+
