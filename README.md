@@ -1,6 +1,8 @@
 # aframe-workshop
 
-This workshop will teach you how to create a simple [A-Frame](https://aframe.io/) scene to run on your phone and display Augmented Reality content using [AR.js](https://github.com/jeromeetienne/AR.js/blob/master/README.md)
+[Examples](https://aframe-workshop.netlify.com)
+
+This workshop will teach you how to create [A-Frame](https://aframe.io/) scenes to run on your phone and display Augmented Reality content using [AR.js](https://github.com/jeromeetienne/AR.js/blob/master/README.md)
 
 ## Prerequisites
 
@@ -53,5 +55,5 @@ Need to include a `<a-entity camera></a-entity>`
 ## Multiple markers
 
 
-## Triggering animations
+## Animating gltfs
 
