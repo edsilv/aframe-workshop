@@ -49,8 +49,6 @@ Better to use simple shapes
 
 Can use Arucogen to generate generic images without rotational symmetry: http://chev.me/arucogen/
 
-Replace Hiro marker with custom marker
-
 `patternRatio: 0.6;` needed as the marker ratio isn't 50%. "Pattern Ratio 0.6" in marker generator means that the pattern within the marker makes up 60% of the overall marker width (including border).
 
 Should be a black border.
