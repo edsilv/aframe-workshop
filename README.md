@@ -1,6 +1,6 @@
 # aframe-workshop
 
-(wip)
+(work in progress)
 
 [Examples](https://aframe-workshop.netlify.com)
 
@@ -28,14 +28,20 @@ Change the size, position, rotation, color of the cube
 ## GLTF
 
 Show a gltf model above the Hiro marker
+
 Animate the rotation of the model about the Y (up) axis
 
 `debugUIEnabled: false;` to remove debug messages overlays
+
 `vr-mode-ui="enabled: false"` to remove VR goggles toggle (not needed)
+
 `renderer="colorManagement: true;"` needed for gltfs (try without)
+
 `loading-screen="dotsColor: white; backgroundColor: black"` loading screen shows while preloading `<a-assets>`
 
 ## Custom markers
+
+Print this [Aruco marker](http://chev.me/arucogen/)
 
 Upload an image to create a custom marker here: https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
 
