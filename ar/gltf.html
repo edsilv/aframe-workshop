@@ -14,13 +14,10 @@
       loading-screen="dotsColor: white; backgroundColor: black"
     >
       <a-assets>
-        <a-asset-item
-          id="gourd"
-          src="https://nomad-project.co.uk/objects/collection/gourd/_gourd/gourd.gltf"
-        ></a-asset-item>
+        <a-asset-item id="headrest" src="https://nomad-project.co.uk/objects/collection/headrest/_headrest/headrest.gltf"></a-asset-item>
       </a-assets>
 
-      <a-entity position="0 1 0" scale="0.1 0.1 0.1" gltf-model="#gourd">
+      <a-entity position="0 1 0" scale="0.1 0.1 0.1" gltf-model="#headrest">
         <a-animation
           attribute="rotation"
           dur="10000"
@@ -30,7 +27,7 @@
           repeat="indefinite"
         ></a-animation>
       </a-entity>
-        
+
       <a-marker-camera preset="hiro"></a-marker-camera>
     </a-scene>
   </body>
