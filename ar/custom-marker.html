@@ -8,7 +8,7 @@
 
   <body style="margin : 0px; overflow: hidden;">
     <a-scene
-      arjs="sourceType: webcam; debugUIEnabled: false;"
+      arjs="patternRatio: 0.6; sourceType: webcam; debugUIEnabled: false;"
       vr-mode-ui="enabled: false"
       renderer="colorManagement: true;"
       loading-screen="dotsColor: white; backgroundColor: black"
@@ -20,7 +20,11 @@
         ></a-asset-item>
       </a-assets>
 
-      <a-entity position="0 1 0" scale="0.1 0.1 0.1" gltf-model="#gourd"></a-entity>
+      <a-entity
+        position="0 1 0"
+        scale="0.1 0.1 0.1"
+        gltf-model="#gourd"
+      ></a-entity>
 
       <a-animation
         attribute="rotation"
@@ -29,9 +33,9 @@
         fill="forwards"
         to="0 360 0"
         repeat="indefinite"
-			></a-animation>
-  
-      <a-marker-camera preset="hiro"></a-marker-camera>
+      ></a-animation>
+
+      <a-marker type="pattern" url="assets/marker.patt"></a-marker>
     </a-scene>
   </body>
 </html>
