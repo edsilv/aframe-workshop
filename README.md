@@ -1,16 +1,18 @@
 # aframe-workshop
 
+(wip)
+
 [Examples](https://aframe-workshop.netlify.com)
 
 This workshop will teach you how to create [A-Frame](https://aframe.io/) scenes to run on your phone and display Augmented Reality content using [AR.js](https://github.com/jeromeetienne/AR.js/blob/master/README.md)
 
 ## Prerequisites
 
-    - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-    - [node](https://nodejs.org) (not strictly necessary - use whatever technique works for you to serve a site on localhost)
-    - [vscode](https://code.visualstudio.com/) (or any text editor)
-    - [netlify account](https://netlify.com)
-    - [printed Hiro marker](https://upload.wikimedia.org/wikipedia/commons/4/48/Hiro_marker_ARjs.png)
+- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [node](https://nodejs.org) (not strictly necessary - use whatever technique works for you to serve a site on localhost)
+- [vscode](https://code.visualstudio.com/) (or any text editor)
+- [netlify account](https://netlify.com)
+- [printed Hiro marker](https://upload.wikimedia.org/wikipedia/commons/4/48/Hiro_marker_ARjs.png)
 
 ## Setup
 
@@ -23,7 +25,7 @@ Install `http-server` to run examples locally:
 Show a cube above the Hiro marker
 Change the size, position, rotation, color of the cube
 
-## Gltf
+## GLTF
 
 Show a gltf model above the Hiro marker
 Animate the rotation of the model about the Y (up) axis
@@ -36,7 +38,10 @@ Animate the rotation of the model about the Y (up) axis
 ## Custom markers
 
 Upload an image to create a custom marker here: https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
-Can use Arucogen to generate images without rotational symmetry: http://chev.me/arucogen/
+
+Better to use simple shapes
+
+Can use Arucogen to generate generic images without rotational symmetry: http://chev.me/arucogen/
 
 Replace Hiro marker with custom marker
 
@@ -55,5 +60,5 @@ Need to include a `<a-entity camera></a-entity>`
 ## Multiple markers
 
 
-## Animating gltfs
+## Animating GLTFs
 
