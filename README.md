@@ -49,7 +49,7 @@ Better to use simple shapes
 
 Can use Arucogen to generate generic images without rotational symmetry: http://chev.me/arucogen/
 
-`patternRatio: 0.6;` needed as the marker ratio isn't 50%. "Pattern Ratio 0.6" in marker generator means that the pattern within the marker makes up 60% of the overall marker width (including border).
+`patternRatio: 0.66;` needed as the marker ratio isn't 50%. A "Pattern Ratio 0.6" in the marker generator means that the pattern within the marker makes up 60% of the overall marker width (including border). For a 4x4 aruco the pattern ratio is 4/6. For a 5x5 it's 5/7 etc.
 
 Should be a black border.
 
@@ -63,6 +63,7 @@ Need to include a `<a-entity camera></a-entity>`
 
 ## Multiple markers
 
+Use `rotating` mixin instead of duplicating attribute.
 
 ## Animating GLTFs
 

@@ -8,13 +8,15 @@
   <body style="margin: 0px; overflow: hidden;">
 		<a-scene
 			embedded
-      arjs="patternRatio: 0.66; sourceType: webcam; debugUIEnabled: false;"
+      arjs="patternRatio: 0.6; sourceType: webcam; debugUIEnabled: false;"
       vr-mode-ui="enabled: false"
       renderer="colorManagement: true;"
       loading-screen="dotsColor: white; backgroundColor: black"
     >
       <a-assets>
-        <a-asset-item id="headrest" src="https://nomad-project.co.uk/objects/collection/headrest/_headrest/headrest.gltf"></a-asset-item>
+				<a-asset-item id="headrest" src="https://nomad-project.co.uk/objects/collection/headrest/_headrest/headrest.gltf"></a-asset-item>
+				<a-asset-item id="gourd" src="https://nomad-project.co.uk/objects/collection/gourd/_gourd/gourd.gltf"></a-asset-item>
+				<a-mixin id="rotating" animation="property: rotation; from: '0 0 0'; to: '0 360 0'; dur: 10000; loop: true; easing: linear; autoplay: true;"></a-mixin>
       </a-assets>
 
 			<a-marker type="pattern" url="/assets/markers/0.patt">
@@ -22,7 +24,17 @@
 					position="0 1 0"
 					scale="0.1 0.1 0.1"
 					gltf-model="#headrest"
-					animation="property: rotation; from: '0 0 0'; to: '0 360 0'; dur: 10000; loop: true; easing: linear; autoplay: true;"
+					mixin="rotating"
+				>
+				</a-entity>
+      </a-marker>
+      
+      <a-marker type="pattern" url="/assets/markers/1.patt">
+				<a-entity
+					position="0 1 0"
+					scale="0.1 0.1 0.1"
+					gltf-model="#gourd"
+					mixin="rotating"
 				>
 				</a-entity>
 			</a-marker>
