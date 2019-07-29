@@ -1,7 +1,5 @@
 # aframe-workshop
 
-(work in progress)
-
 [Examples](https://aframe-workshop.netlify.com)
 
 This workshop will teach you how to create [A-Frame](https://aframe.io/) scenes to run on your phone and display Augmented Reality content using [AR.js](https://github.com/jeromeetienne/AR.js/blob/master/README.md)
@@ -13,6 +11,12 @@ This workshop will teach you how to create [A-Frame](https://aframe.io/) scenes 
 - [vscode](https://code.visualstudio.com/) (or any text editor)
 - [netlify account](https://netlify.com)
 - [printed Hiro marker](https://upload.wikimedia.org/wikipedia/commons/4/48/Hiro_marker_ARjs.png)
+- [printed Aruco markers](http://chev.me/arucogen/) (use dictionary: 4x4, marker ids: 0 and 1, marker size: 100mm)
+
+## Technologies
+
+- [A-Frame](https://aframe.io)
+- [AR.js](https://github.com/jeromeetienne/AR.js) an [emscripten](https://en.wikipedia.org/wiki/Emscripten) port of [ARToolkit](https://github.com/artoolkit/jsartoolkit5)
 
 ## Setup
 
@@ -20,28 +24,36 @@ Install `http-server` to run examples locally:
 
     npm i http-server -g
 
-## Cube
+## Exercises
 
-Show a cube above the Hiro marker
-Change the size, position, rotation, color of the cube
+### 1. Cube
 
-## GLTF
+**Goals**
 
-Show a gltf model above the Hiro marker
+- Display a cube above the printed Hiro marker
 
-Animate the rotation of the model about the Y (up) axis
+**Extra**
 
-`debugUIEnabled: false;` to remove debug messages overlays
+- Change the default size, position, rotation, and color of the cube
 
-`vr-mode-ui="enabled: false"` to remove VR goggles toggle (not needed)
+### 2. GLTF
 
-`renderer="colorManagement: true;"` needed for gltfs (try without)
+**Goals**
 
-`loading-screen="dotsColor: white; backgroundColor: black"` loading screen shows while preloading `<a-assets>`
+- Load a gltf model above the Hiro marker, e.g. https://nomad-project.co.uk/objects/collection/headrest/_headrest/headrest.gltf
+- Animate the rotation of the model about the Y (up) axis
 
-## Custom markers
+**Extra**
 
-Print this [Aruco marker](http://chev.me/arucogen/)
+- Use `<a-assets>` to preload your gltf
+- Use `debugUIEnabled: false;` to remove debug message overlays
+- Use `vr-mode-ui="enabled: false"` to remove VR goggles toggle (not needed)
+- Use `renderer="colorManagement: true;"` to enable colour management (otherwise gltfs don't display correctly)
+- Use `loading-screen="dotsColor: white; backgroundColor: black"` to create a customised loading screen
+
+### 3. Custom markers
+
+
 
 Upload an image to create a custom marker here: https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
 
@@ -61,9 +73,8 @@ Models must be placed inside the `a-marker` tags.
 
 Need to include a `<a-entity camera></a-entity>`
 
-## Multiple markers
+### 4. Multiple markers
 
 Use `rotating` mixin instead of duplicating attribute.
 
-## Animating GLTFs
 
