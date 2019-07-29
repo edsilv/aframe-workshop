@@ -17,7 +17,7 @@ This workshop will teach you how to create [A-Frame](https://aframe.io/) scenes 
 
 In the following exercises you will follow along with the workshop instructor to create a series of web pages that allow you to view 3D content displayed over printed AR markers using your smartphone.
 
-We will be using https://netlify.com to serve these web pages from a github repository.
+We will be using https://netlify.com to serve these web pages from a github repository. Netlify supports SSL (https) by default, which is necessary for accessing your phone's camera.
 
 First create a github repository called `asyncjs-aframe-workshop` and clone it to your laptop.
 
@@ -104,6 +104,7 @@ Save your `gltf.html` page as a new `custom-marker.html` page, removing your glt
 **Goals**
 
 - Upload `assets/markers/upload/0.png` to create a custom marker here: https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
+- Download the generated .patt file and add to `assets/markers`
 - Use this custom marker in your scene instead of the Hiro marker preset
 
 **Notes**
@@ -122,7 +123,7 @@ Save your `gltf.html` page as a new `custom-marker.html` page, removing your glt
 <details>
 <summary>4. Multiple Markers</summary>
 
-Save your `custom-marker.html` page as a new `multiple-markers.html` page, removing your gltf entity and `a-marker-camera` from the scene.
+Save your `custom-marker.html` page as a new `multiple-markers.html` page.
 
 **Goals**
 
