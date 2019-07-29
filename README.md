@@ -54,13 +54,6 @@ All exercises have examples here: https://github.com/edsilv/aframe-workshop/tree
 <details>
 <summary>1. Cube</summary>
 
-**Goals**
-
-- Display a 3D cube above the printed Hiro marker
-- Change the default size, position, rotation, and color of the cube
-
-**Notes**
-
 Create a `cube.html` page. Use this "boilerplate" code:
 
 ```html
@@ -78,10 +71,18 @@ Create a `cube.html` page. Use this "boilerplate" code:
 </html>
 ```
 
+**Goals**
+
+- Display a 3D cube above the printed Hiro marker
+- Change the default size, position, rotation, and color of the cube
+
+
 </details>
 
 <details>
 <summary>2. GLTF</summary>
+
+Save your `cube.html` as a new `gltf.html` page, removing your cube from the scene.
 
 **Goals**
 
@@ -93,15 +94,12 @@ Create a `cube.html` page. Use this "boilerplate" code:
 - Use `renderer="colorManagement: true;"` to enable colour management (otherwise gltfs don't display correctly)
 - Use `loading-screen="dotsColor: white; backgroundColor: black"` to create a customised loading screen
 
-
-**Notes**
-
-Save your `cube.html` as a new `gltf.html` page, removing your cube from the scene.
-
 </details>
 
 <details>
 <summary>3. Custom Marker</summary>
+
+Save your `gltf.html` page as a new `custom-marker.html` page, removing your gltf entity and `a-marker-camera` from the scene.
 
 **Goals**
 
@@ -110,7 +108,6 @@ Save your `cube.html` as a new `gltf.html` page, removing your cube from the sce
 
 **Notes**
 
-- Create a `custom-marker.html` page
 - Set AR.js `patternRatio: 0.66;`: Aesthetically, it's preferable for the black border to match the Aruco grid pattern. `patternRatio: 0.66;` is needed as the marker ratio isn't 50%. A "Pattern Ratio 0.6" in the marker generator means that the pattern within the marker makes up 60% of the overall marker width (including border). For a 4x4 aruco the pattern ratio is 4/6 (4 grid items plus 2 sides of border). For a 5x5 it's 5/7 (5 grid items plus two sides of border), etc.
 - Use `<a-entity camera></a-entity>`
 - Models must be placed inside the `a-marker` tags
@@ -125,7 +122,7 @@ Save your `cube.html` as a new `gltf.html` page, removing your cube from the sce
 <details>
 <summary>4. Multiple Markers</summary>
 
-Save your `gltf.html` page as a new `multiple-markers.html` page, removing your gltf entity and `a-marker-camera` from the scene.
+Save your `custom-marker.html` page as a new `multiple-markers.html` page, removing your gltf entity and `a-marker-camera` from the scene.
 
 **Goals**
 
