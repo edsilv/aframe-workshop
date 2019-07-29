@@ -31,9 +31,6 @@ Install `http-server` to run examples locally:
 **Goals**
 
 - Display a cube above the printed Hiro marker
-
-**Extra**
-
 - Change the default size, position, rotation, and color of the cube
 
 ### 2. GLTF
@@ -42,39 +39,34 @@ Install `http-server` to run examples locally:
 
 - Load a gltf model above the Hiro marker, e.g. https://nomad-project.co.uk/objects/collection/headrest/_headrest/headrest.gltf
 - Animate the rotation of the model about the Y (up) axis
-
-**Extra**
-
 - Use `<a-assets>` to preload your gltf
 - Use `debugUIEnabled: false;` to remove debug message overlays
 - Use `vr-mode-ui="enabled: false"` to remove VR goggles toggle (not needed)
 - Use `renderer="colorManagement: true;"` to enable colour management (otherwise gltfs don't display correctly)
 - Use `loading-screen="dotsColor: white; backgroundColor: black"` to create a customised loading screen
 
-### 3. Custom markers
+### 3. Custom marker
 
+**Goals**
 
+- Upload `assets/markers/upload/0.png` to create a custom marker here: https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
+- Use this custom marker in your scene instead of the Hiro marker preset
 
-Upload an image to create a custom marker here: https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
+**Notes**
 
-Better to use simple shapes
-
-Can use Arucogen to generate generic images without rotational symmetry: http://chev.me/arucogen/
-
-`patternRatio: 0.66;` needed as the marker ratio isn't 50%. A "Pattern Ratio 0.6" in the marker generator means that the pattern within the marker makes up 60% of the overall marker width (including border). For a 4x4 aruco the pattern ratio is 4/6. For a 5x5 it's 5/7 etc.
-
-Should be a black border.
-
-Thicker borders are better for stability.
-
-Markers can be as small as 1.5/2cm but means that the phone has to be held close.
-
-Models must be placed inside the `a-marker` tags.
-
-Need to include a `<a-entity camera></a-entity>`
+- Set AR.js `patternRatio: 0.66;`: Aesthetically, it's preferable for the black border to match the Aruco grid pattern. `patternRatio: 0.66;` is needed as the marker ratio isn't 50%. A "Pattern Ratio 0.6" in the marker generator means that the pattern within the marker makes up 60% of the overall marker width (including border). For a 4x4 aruco the pattern ratio is 4/6 (4 grid items plus 2 sides of border). For a 5x5 it's 5/7 (5 grid items plus two sides of border), etc.
+- Use `<a-entity camera></a-entity>`
+- Models must be placed inside the `a-marker` tags
+- Better to use simple shapes for markers
+- Markers must not have rotational symmetry
+- Black borders seem to work best
+- Thicker borders are better for stability
+- Markers can be as small as 1.5/2cm but it means that the phone has to be held close
 
 ### 4. Multiple markers
 
-Use `rotating` mixin instead of duplicating attribute.
+**Goals**
 
-
+- Upload `assets/markers/upload/1.png` to create a custom marker here: https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
+- Use this second custom marker in your scene to display https://nomad-project.co.uk/objects/collection/gourd/_gourd/gourd.gltf
+- Create a `rotating` mixin instead of duplicating the animation attribute.
