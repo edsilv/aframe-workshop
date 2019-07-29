@@ -17,7 +17,7 @@ This workshop will teach you how to create [A-Frame](https://aframe.io/) scenes 
 
 In the following exercises you will follow along with the workshop instructor to create a series of web pages that allow you to view 3D content displayed over printed AR markers using your smartphone.
 
-We will be using netlify.com to serve these web pages from a github repository.
+We will be using https://netlify.com to serve these web pages from a github repository.
 
 First create a github repository called `asyncjs-aframe-workshop` and clone it to your laptop.
 
@@ -48,6 +48,8 @@ All exercises have examples here: https://github.com/edsilv/aframe-workshop/tree
 [A-Frame documentation](https://aframe.io/docs/0.9.0/introduction/)
 
 [AR.js documentation](https://github.com/jeromeetienne/AR.js-docs)
+
+## Exercises
 
 <details>
 <summary>1. Cube</summary>
