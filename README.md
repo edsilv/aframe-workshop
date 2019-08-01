@@ -19,7 +19,7 @@ In the following exercises you will follow along with the workshop instructor to
 
 We will be using https://netlify.com to serve these web pages from a github repository. Netlify supports SSL (https) by default, which is necessary for accessing your phone's camera.
 
-First create a github repository called `asyncjs-aframe-workshop` and clone it to your laptop.
+First create a github repository called `asyncjs-aframe-workshop` and clone it to your laptop. Make sure you select add readme so your repo isn't empty.
 
 Now login to netlify.com and select `New site from Git`.
 
@@ -70,6 +70,10 @@ Create a `cube.html` page. Use this "boilerplate" code:
   </body>
 </html>
 ```
+
+Push it to your github repo's master branch. Now browse to your netlify site `/cube.html`.
+
+You browser may prompt you to have access to your camera, click `allow`.
 
 **Goals**
 
