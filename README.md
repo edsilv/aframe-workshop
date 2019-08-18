@@ -54,7 +54,7 @@ All exercises have examples here: https://github.com/edsilv/aframe-workshop/tree
 <details>
 <summary>1. Cube</summary>
 
-Create a `cube.html` page. Use this "boilerplate" code:
+Create a `1-cube.html` page. Use this "boilerplate" code:
 
 ```html
 <html>
@@ -80,13 +80,12 @@ You browser may prompt you to have access to your camera, click `allow`.
 - Display a 3D cube above the printed Hiro marker
 - Change the default size, position, rotation, and color of the cube
 
-
 </details>
 
 <details>
 <summary>2. GLTF</summary>
 
-Save your `cube.html` as a new `gltf.html` page, removing your cube from the scene.
+Save your `1-cube.html` as a new `2-gltf.html` page, removing your cube from the scene.
 
 **Goals**
 
@@ -95,7 +94,7 @@ Save your `cube.html` as a new `gltf.html` page, removing your cube from the sce
 - Use `<a-assets>` to preload your gltf
 - Use `debugUIEnabled: false;` to remove debug message overlays
 - Use `vr-mode-ui="enabled: false"` to remove VR goggles toggle (not needed)
-- Use `renderer="colorManagement: true;"` to enable colour management (otherwise gltfs don't display correctly)
+- Use `renderer="logarithmicDepthBuffer: true; colorManagement: true;"`to [fix z-fighting](https://github.com/jeromeetienne/AR.js/issues/410#issuecomment-495952203) and enable colour management (otherwise gltfs don't display correctly)
 - Use `loading-screen="dotsColor: white; backgroundColor: black"` to create a customised loading screen
 
 </details>
@@ -103,7 +102,7 @@ Save your `cube.html` as a new `gltf.html` page, removing your cube from the sce
 <details>
 <summary>3. Custom Marker</summary>
 
-Save your `gltf.html` page as a new `custom-marker.html` page, removing your gltf entity and `a-marker-camera` from the scene.
+Save your `2-gltf.html` page as a new `3-custom-marker.html` page, removing your gltf entity and `a-marker-camera` from the scene.
 
 **Goals**
 
@@ -127,12 +126,24 @@ Save your `gltf.html` page as a new `custom-marker.html` page, removing your glt
 <details>
 <summary>4. Multiple Markers</summary>
 
-Save your `custom-marker.html` page as a new `multiple-markers.html` page.
+Save your `3-custom-marker.html` page as a new `4-multiple-markers.html` page.
 
 **Goals**
 
 - Upload `assets/markers/upload/1.png` to create a custom marker here: https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html
 - Use this second custom marker in your scene to display https://nomad-project.co.uk/objects/collection/gourd/_gourd/gourd.gltf
 - Create a `rotating` mixin instead of duplicating the animation attribute.
+
+</details>
+
+<details>
+<summary>5. Google Poly</summary>
+
+Save your `3-custom-marker.html` page as a new `5-google-poly.html` page.
+
+**Goals**
+
+- [Sign up for a Google Poly API key](https://developers.google.com/poly/develop/web)
+- Add a [Google Poly A-Frame component](https://github.com/TopRankMarketing/aframe-google-poly-component) to your scene.
 
 </details>
