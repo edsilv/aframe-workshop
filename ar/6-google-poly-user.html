@@ -40,7 +40,7 @@
           if (params && params['access_token']) {
             var xhr = new XMLHttpRequest();
             xhr.open('GET',
-                'https://poly.googleapis.com/v1/me/assets/?' +
+                'https://poly.googleapis.com/v1/me/assets?' +
                 'access_token=' + params['access_token']);
             xhr.onreadystatechange = function (e) {
               if (xhr.readyState === 4 && xhr.status === 200) {
