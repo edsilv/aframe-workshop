@@ -144,6 +144,16 @@ Save your `3-custom-marker.html` page as a new `5-google-poly.html` page.
 **Goals**
 
 - [Sign up for a Google Poly API key](https://developers.google.com/poly/develop/web)
-- Add a [Google Poly A-Frame component](https://github.com/TopRankMarketing/aframe-google-poly-component) to your scene.
+- Add a [Google Poly A-Frame component](https://github.com/TopRankMarketing/aframe-google-poly-component) to your scene to display a given object.
+
+</details>
+<summary>6. Google Poly User</summary>
+
+Save your `5-google-poly.html` page as a new `6-google-poly-user.html` page.
+
+**Goals**
+
+- [Set up an OAuth User Agent](https://developers.google.com/identity/protocols/OAuth2UserAgent)
+- Query objects by a particular user and display them over markers.
 
 </details>

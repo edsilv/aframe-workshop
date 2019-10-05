@@ -1,0 +1,20 @@
+{
+  "name": "aframe-workshop",
+  "version": "1.0.0",
+  "description": "[Examples](https://aframe-workshop.netlify.com)",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx serve -c 0 -T -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edsilv/aframe-workshop.git"
+  },
+  "keywords": [],
+  "author": "@edsilv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edsilv/aframe-workshop/issues"
+  },
+  "homepage": "https://github.com/edsilv/aframe-workshop#readme"
+}
