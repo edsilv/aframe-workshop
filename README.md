@@ -1,6 +1,6 @@
 # aframe-workshop
 
-[Examples](https://aframe-workshop.netlify.com)
+[Examples](https://aframe-workshop.com)
 
 This workshop will teach you how to create [A-Frame](https://aframe.io/) scenes to run on your phone and display Augmented Reality content using [AR.js](https://github.com/jeromeetienne/AR.js/blob/master/README.md) an [emscripten](https://en.wikipedia.org/wiki/Emscripten) port of [ARToolkit](https://github.com/artoolkit/artoolkit5)
 
