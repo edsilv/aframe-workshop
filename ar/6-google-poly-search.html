@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>A-Frame Workshop</title>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/ar.js@1.7.1/aframe/build/aframe-ar.min.js"></script>
+    <script src="/assets/components/aframe-google-poly-component.js"></script>
+  </head>
+
+  <body style="margin: 0px; overflow: hidden;">
+		<a-scene
+			embedded
+      arjs="patternRatio: 0.66; sourceType: webcam; debugUIEnabled: false;"
+      vr-mode-ui="enabled: false"
+      renderer="logarithmicDepthBuffer: true; colorManagement: true;"
+      loading-screen="dotsColor: white; backgroundColor: black"
+      google-poly="api_key: AIzaSyBCQ44lFHGHgkLkaLlpW5-sreHGLOASWds"
+    >
+
+      <a-entity camera></a-entity>
+
+    </a-scene>
+
+    <script>
+
+      window.addEventListener('DOMContentLoaded', function() {
+        var api_key = "AIzaSyBCQ44lFHGHgkLkaLlpW5-sreHGLOASWds";
+        var format = "GLTF2";
+        var max_markers = 5;
+        var scene = document.querySelector("a-scene");
+
+        function search(category, keywords) {
+          var url = `https://poly.googleapis.com/v1/assets?category=${category}&keywords=${keywords}&format=${format}&key=${api_key}`;
+          var request = new XMLHttpRequest();
+          request.open('GET', url, true);
+          request.addEventListener('load', function (event) {
+            var response = JSON.parse(event.target.response);          
+            max_markers = Math.min(response.assets.length, max_markers);
+
+            for (var i = 0; i < max_markers; i++) {
+              var asset = response.assets[i];
+              var name = asset.name.split("/")[1];
+              var marker = `<a-marker type="pattern" url="/assets/markers/${i}.patt">
+                <a-entity
+                  scale="2 2 2"
+                  position="0 1 0"
+                  google-poly="src: ${name};"
+                  animation="property: rotation; from: '0 0 0'; to: '0 360 0'; dur: 10000; loop: true; easing: linear; autoplay: true;"
+                >
+                </a-entity>
+              </a-marker>`;
+
+              var child = document.createElement('div');
+              child.innerHTML = marker;
+              child = child.firstChild;
+              scene.prepend(child);
+            }
+          });
+          request.send(null);
+        }
+
+        search("animals", "jungle");
+      });
+
+    </script>
+  </body>
+</html>

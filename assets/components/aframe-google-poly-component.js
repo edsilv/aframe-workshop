@@ -4,8 +4,8 @@ AFRAME.registerSystem('google-poly', {
       type: 'string',
     }
   },
-  loadAsset: function (id, el) {
-    const API_KEY = this.data.api_key;
+  loadAsset: function (id, scale, el) {
+    var API_KEY = this.data.api_key;
     var url = `https://poly.googleapis.com/v1/assets/${id}/?key=${API_KEY}`;
     var request = new XMLHttpRequest();
     request.open('GET', url, true);
@@ -51,12 +51,21 @@ AFRAME.registerSystem('google-poly', {
         loader.setCrossOrigin(true);
         loader.load(obj.url,
           function (gltf) {
-            var box = new THREE.Box3();
-            box.setFromObject(gltf.scene);
-            var center = box.getCenter();
-            center.y = box.min.y;
-            gltf.scene.position.sub(center);
-            el.setObject3D('mesh', gltf.scene);;
+            var mroot = gltf.scene;
+            var bbox = new THREE.Box3().setFromObject(mroot);
+            var cent = bbox.getCenter(new THREE.Vector3());
+            var size = bbox.getSize(new THREE.Vector3());
+
+            // Rescale the object to normalized space
+            var maxAxis = Math.max(size.x, size.y, size.z);
+            mroot.scale.multiplyScalar(1.0 / maxAxis);
+            bbox.setFromObject(mroot);
+            bbox.getCenter(cent);
+            bbox.getSize(size);
+
+            // Reposition
+            mroot.position.copy(cent).multiplyScalar(-1);
+            el.setObject3D('mesh', mroot);
           },
           function (xhr) {
             console.log((xhr.loaded / xhr.total * 100) + '% loaded');
@@ -95,7 +104,7 @@ AFRAME.registerComponent('google-poly', {
       el = this.el,
       data = this.data,
       system = this.system;
-    system.loadAsset(data.src, el);
+    system.loadAsset(data.src, data.scale, el);
   }
 })
 AFRAME.registerPrimitive('a-google-poly', {

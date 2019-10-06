@@ -139,21 +139,28 @@ Save your `3-custom-marker.html` page as a new `4-multiple-markers.html` page.
 <details>
 <summary>5. Google Poly</summary>
 
-Save your `3-custom-marker.html` page as a new `5-google-poly.html` page.
-
 **Goals**
 
 - [Sign up for a Google Poly API key](https://developers.google.com/poly/develop/web)
 - Add a [Google Poly A-Frame component](https://github.com/TopRankMarketing/aframe-google-poly-component) to your scene to display a given object.
 
 </details>
-<summary>6. Google Poly User</summary>
+<details>
+<summary>7. Google Poly Search</summary>
 
-Save your `5-google-poly.html` page as a new `6-google-poly-user.html` page.
+**Goals**
+
+- Query objects in a particular category and display them over markers.
+
+</details>
+<details>
+<summary>7. Google Poly User (unfinished)</summary>
 
 **Goals**
 
 - [Set up an OAuth User Agent](https://developers.google.com/identity/protocols/OAuth2UserAgent)
-- Query objects by a particular user and display them over markers.
+- Request objects by a particular user and display them over markers.
 
 </details>
+
+next: add tilt brush scenes https://github.com/googlevr/poly-sample-web/blob/master/search-sample.html
