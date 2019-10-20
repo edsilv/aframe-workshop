@@ -9,7 +9,7 @@ This workshop will teach you how to create [A-Frame](https://aframe.io/) scenes 
 - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - [vscode](https://code.visualstudio.com/) (or any text editor)
 - [github account](https://github.com)
-- [netlify account](https://netlify.com)
+- [netlify account](https://netlify.com) (you'll need this to host your webpage using https - this is required to access your camera from a browser)
 - [printed Hiro marker](https://upload.wikimedia.org/wikipedia/commons/4/48/Hiro_marker_ARjs.png)
 - [printed Aruco markers](http://chev.me/arucogen/) (use dictionary: 4x4, marker ids: 0 and 1, marker size: 100mm)
 
