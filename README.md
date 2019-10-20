@@ -4,24 +4,25 @@
 
 This workshop will teach you how to create [A-Frame](https://aframe.io/) scenes to run on your phone and display Augmented Reality content using [AR.js](https://github.com/jeromeetienne/AR.js/blob/master/README.md) an [emscripten](https://en.wikipedia.org/wiki/Emscripten) port of [ARToolkit](https://github.com/artoolkit/artoolkit5)
 
-## Prerequisites
+## What you need to get started
 
-- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- [vscode](https://code.visualstudio.com/) (or any text editor)
-- [github account](https://github.com)
-- [netlify account](https://netlify.com) (you'll need this to host your webpage using https - this is required to access your camera from a browser. You can sign up with your github account)
-- [printed Hiro marker](https://upload.wikimedia.org/wikipedia/commons/4/48/Hiro_marker_ARjs.png)
-- [printed Aruco markers](http://chev.me/arucogen/) (use dictionary: 4x4, marker ids: 0 and 1, marker size: 100mm)
+You'll need to install the following:
+
+1. [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+2. [vscode](https://code.visualstudio.com/) (or any text editor)
+3. [github account](https://github.com)
+4. [netlify account](https://netlify.com) (you can use your github account to sign up)
+5. [printed AR markers](https://github.com/edsilv/aframe-workshop/blob/master/assets/markers/markers.png)
+
+We will be using https://netlify.com to serve web pages from a github repository. Netlify supports SSL (https) by default, which is necessary for accessing your phone's camera.
 
 ## Setup
 
 In the following exercises you will follow along with the workshop instructor to create a series of web pages that allow you to view 3D content displayed over printed AR markers using your smartphone.
 
-We will be using https://netlify.com to serve these web pages from a github repository. Netlify supports SSL (https) by default, which is necessary for accessing your phone's camera.
+[Create a github repository](https://help.github.com/en/articles/create-a-repo) called `aframe-workshop` and clone it to your laptop. Make sure you select add readme so your repo isn't empty.
 
-First create a github repository called `aframe-workshop` and clone it to your laptop. Make sure you select add readme so your repo isn't empty.
-
-Now login to netlify.com and select `New site from Git`.
+Log in to netlify.com and select `New site from Git`. 
 
 Choose `GitHub`.
 
@@ -43,13 +44,13 @@ Add `index.html` to git, commit, and push it.
 
 Wait a few moments then refresh your netlify page. You should see `Hello world`. You now have everything you need to develop your web pages!
 
+## Exercises
+
 All exercises have examples here: https://github.com/edsilv/aframe-workshop/tree/master/ar
 
 [A-Frame documentation](https://aframe.io/docs/0.9.0/introduction/)
 
 [AR.js documentation](https://github.com/jeromeetienne/AR.js-docs)
-
-## Exercises
 
 <details>
 <summary>1. Cube</summary>
@@ -162,5 +163,3 @@ Save your `3-custom-marker.html` page as a new `4-multiple-markers.html` page.
 - Request objects by a particular user and display them over markers.
 
 </details>
-
-next: add tilt brush scenes https://github.com/googlevr/poly-sample-web/blob/master/search-sample.html
