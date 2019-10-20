@@ -101,9 +101,26 @@ Save your `1-cube.html` as a new `2-gltf.html` page, removing your cube from the
 </details>
 
 <details>
-<summary>3. Custom Marker</summary>
+<summary>3. Sound</summary>
 
-Save your `2-gltf.html` page as a new `3-custom-marker.html` page, removing your gltf entity and `a-marker-camera` from the scene.
+Save your `2-gltf.html` as a new `3-sound.html` page.
+
+**Goals**
+
+- Add a sound asset to `assets` using a URL to an MP3 file.
+- Add an `a-sound` tag to your `a-scene` that plays when the object is shown.
+
+**Notes**
+
+- Put your gltf and sound inside a `<a-marker type="pattern" preset="hiro"></a-marker>` and replace your `<a-marker-camera preset="hiro"></a-marker-camera>` with a `<a-entity camera></a-entity>`. This is a helpful way to group objects by marker.
+- Use the `play-on-marker-visible` component to only play the sound when the parent marker is visible.
+
+</details>
+
+<details>
+<summary>4. Custom Marker</summary>
+
+Save your `3-sound.html` page as a new `4-custom-marker.html` page, removing everything from your `a-scene`.
 
 **Goals**
 
@@ -125,9 +142,9 @@ Save your `2-gltf.html` page as a new `3-custom-marker.html` page, removing your
 </details>
 
 <details>
-<summary>4. Multiple Markers</summary>
+<summary>5. Multiple Markers</summary>
 
-Save your `3-custom-marker.html` page as a new `4-multiple-markers.html` page.
+Save your `4-custom-marker.html` page as a new `5-multiple-markers.html` page.
 
 **Goals**
 
@@ -138,12 +155,12 @@ Save your `3-custom-marker.html` page as a new `4-multiple-markers.html` page.
 </details>
 
 <details>
-<summary>5. Google Poly</summary>
+<summary>6. Google Poly</summary>
 
 **Goals**
 
 - [Sign up for a Google Poly API key](https://developers.google.com/poly/develop/web)
-- Add a [Google Poly A-Frame component](https://github.com/TopRankMarketing/aframe-google-poly-component) to your scene to display a given object.
+- Add a [Google Poly A-Frame component](https://github.com/TopRankMarketing/aframe-google-poly-component) to your scene to display a given object or objects.
 
 </details>
 <details>
@@ -151,15 +168,16 @@ Save your `3-custom-marker.html` page as a new `4-multiple-markers.html` page.
 
 **Goals**
 
-- Query objects in a particular category and display them over markers.
+- Query objects in a particular category and display them over dynamically generated markers.
 
 </details>
+<!--
 <details>
-<summary>7. Google Poly User (unfinished)</summary>
+<summary>7. Google Poly User</summary>
 
 **Goals**
 
 - [Set up an OAuth User Agent](https://developers.google.com/identity/protocols/OAuth2UserAgent)
 - Request objects by a particular user and display them over markers.
 
-</details>
+</details>-->
