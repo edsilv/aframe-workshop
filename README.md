@@ -22,9 +22,11 @@ In the following exercises you will follow along with the workshop instructor to
 
 [Create a github repository](https://help.github.com/en/articles/create-a-repo) called `aframe-workshop` and clone it to your laptop. Make sure you select add readme so your repo isn't empty.
 
-Log in to netlify.com and select `New site from Git`. 
+Log in to netlify.com (you can use your github account to login) and select `New site from Git`. 
 
 Choose `GitHub`.
+
+Give netlify access to your github account (Configure Netlify App button).
 
 Search for `aframe-workshop` and select it.
 
@@ -42,6 +44,10 @@ Add `index.html` to git, commit, and push it.
     git commit -m "initial commit"
     git push origin master
 
+If this is your first time using git, you can store your login details like this:
+
+  git config --global credential.helper store
+
 Wait a few moments then refresh your netlify page. You should see `Hello world`. You now have everything you need to develop your web pages!
 
 ## Exercises
@@ -55,7 +61,7 @@ All exercises have examples here: https://github.com/edsilv/aframe-workshop/tree
 <details>
 <summary>1. Cube</summary>
 
-Create a `1-cube.html` page. Use this "boilerplate" code:
+Create a new file called `1-cube.html`. Copy and paste this "boilerplate" code into it:
 
 ```html
 <html>
@@ -72,14 +78,14 @@ Create a `1-cube.html` page. Use this "boilerplate" code:
 </html>
 ```
 
-Push it to your github repo's master branch. Now browse to your netlify site `/cube.html`.
+Push it to your github repo's master branch. Now browse to your netlify site `/1-cube.html`.
 
 You browser may prompt you to have access to your camera, click `allow`.
 
 **Goals**
 
-- Display a 3D cube above the printed Hiro marker
-- Change the default size, position, rotation, and color of the cube
+- Display a 3D cube above the printed Hiro marker preset (check the aframe.io documentation for `a-box`, search google for "a-marker-camera")
+- Change the default size, position, rotation, and color of the cube 
 
 </details>
 
