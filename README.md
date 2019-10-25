@@ -46,7 +46,7 @@ Add `index.html` to git, commit, and push it.
 
 If this is your first time using git, you can store your login details like this:
 
-  git config --global credential.helper store
+    git config --global credential.helper store
 
 Wait a few moments then refresh your netlify page. You should see `Hello world`. You now have everything you need to develop your web pages!
 
