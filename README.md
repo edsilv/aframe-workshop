@@ -1,6 +1,6 @@
 # aframe-workshop
 
-[glitch.com version](https://glitch.com/~edsilv-aframe-workshop)
+I highly recommend using the [glitch.com version](https://glitch.com/~edsilv-aframe-workshop) of this workshop as there's zero setup required!
 
 [Examples](https://aframe-workshop.com)
 
